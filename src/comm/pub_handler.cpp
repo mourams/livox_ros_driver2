@@ -158,9 +158,9 @@ void PubHandler::CheckTimer() {
 
   for (auto &process_handler : lidar_process_handlers_) {
     uint64_t recent_time_ms = process_handler.second->GetRecentTimeStamp() / kRatioOfMsToNs;
-    if ((recent_time_ms % publish_interval_ms_ != 0) || recent_time_ms == 0) {
-      continue;
-    }
+    // if ((recent_time_ms % publish_interval_ms_ != 0) || recent_time_ms == 0) {
+    //   continue;
+    // }
 
     uint64_t diff = process_handler.second->GetRecentTimeStamp() - process_handler.second->GetLidarBaseTime();
     if (diff < publish_interval_tolerance_) {
