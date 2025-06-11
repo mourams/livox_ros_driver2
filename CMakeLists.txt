@@ -227,6 +227,7 @@ else($ENV{ROS_VERSION} STREQUAL "2")
   find_package(std_msgs REQUIRED)
   find_package(builtin_interfaces REQUIRED)
   find_package(rosidl_default_generators REQUIRED)
+  find_package(pcl_ros REQUIRED)
 
   # check apr
   find_package(PkgConfig)
